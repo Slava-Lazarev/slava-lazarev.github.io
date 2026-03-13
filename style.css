@@ -1,0 +1,281 @@
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid rgba(204, 204, 204, 0.3);
+}
+
+a {
+    color: #0060a0;
+    text-decoration: none;
+    box-shadow: inset 0 -1px 0 rgba(0, 96, 160, 0.2);
+}
+
+a:visited {
+    box-shadow: inset 0 -1px 0 rgba(0, 96, 160, 0.2);
+}
+
+a:hover {
+    color: #dd0073;
+    box-shadow: inset 0 -1px 0 #dd0073;
+}
+
+ul {
+    list-style: none;
+    margin-top: -8px;
+    margin-bottom: 16px;
+    max-width: 500px;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    padding: 20px 0;
+    background-color: #f8f8f8;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #0066cc;
+}
+
+/* Main */
+.main {
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+/* Layout 1:4 */
+.layout {
+    display: flex;
+    gap: 40px;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 240px;
+    padding: 0;
+    border-radius: 8px;
+    order: 2;
+}
+
+.sidebar ul li {
+    padding-left: 0;
+}
+
+.content {
+    flex: 4;
+    order: 1;
+}
+
+.sidebar-title {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: #e0e0e0;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+h1.section-title {
+    font-size: 2rem;
+}
+
+.section-text {
+    max-width: 600px;
+    margin-bottom: 16px;
+}
+
+.section-text:last-child {
+    margin-bottom: 0;
+}
+
+.caption {
+    display: inline;
+    margin-top: 4px;
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 96, 160, 0.2);
+    text-underline-offset: 3px;
+}
+
+.figure {
+    display: block;
+    box-shadow: none;
+    color: #0060a0;
+    text-decoration: none;
+}
+
+.figure:hover {
+    color: #ff0084;
+    box-shadow: none;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.figure:hover .caption {
+    text-decoration-color: #ff0084;
+}
+
+/* Grid 2 columns */
+.grid-2 {
+    display: flex;
+    gap: 20px;
+}
+
+.grid-2-item {
+    flex: 1;
+}
+
+.grid-2-title {
+    margin-bottom: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.grid-2-text {
+    max-width: 600px;
+}
+
+/* Footer */
+.footer {
+    padding: 30px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Utility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sidebar {
+        order: 1;
+        min-width: 0;
+    }
+
+    .content {
+        order: 2;
+    }
+
+    .section-text {
+        max-width: 100%;
+    }
+
+    ul {
+        max-width: 100%;
+    }
+}
