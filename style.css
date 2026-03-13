@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: 'Arima', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     line-height: 1.5;
     color: #000;
     background-color: #fff;
@@ -180,7 +180,7 @@ h1.section-title {
     font-size: 14px;
     text-decoration: underline;
     text-decoration-color: rgba(0, 96, 160, 0.2);
-    text-underline-offset: 3px;
+    text-underline-offset: 1px;
 }
 
 .figure {
