@@ -279,3 +279,22 @@ h1.section-title {
         max-width: 100%;
     }
 }
+/* Product portfolio cases */
+.portfolio-project h2.section-title {
+    margin-top: 32px;
+}
+
+.portfolio-project ul {
+    margin-top: 0;
+}
+
+.portfolio-case {
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-case {
+        margin-left: 16px;
+    }
+}
